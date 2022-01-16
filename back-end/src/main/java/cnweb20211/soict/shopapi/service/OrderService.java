@@ -22,4 +22,5 @@ public interface OrderService {
 
     OrderMain cancel(Long orderId);
 
+    void deleteById (Long orderId);
 }

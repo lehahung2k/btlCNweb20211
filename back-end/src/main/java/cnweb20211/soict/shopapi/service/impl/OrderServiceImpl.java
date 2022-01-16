@@ -96,4 +96,11 @@ public class OrderServiceImpl implements OrderService {
         return orderRepository.findByOrderId(orderId);
 
     }
+
+    @Override
+    public void deleteById(Long orderId) {
+        OrderMain orderMain = findOne(orderId);
+        if (orderMain == null) throw new MyException(ResultEnum.PRODUCT_NOT_EXIST);
+        orderRepository.delete(orderMain);
+    }
 }

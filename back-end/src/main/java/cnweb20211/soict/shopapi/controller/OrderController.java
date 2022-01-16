@@ -68,4 +68,10 @@ public class OrderController {
         Collection<ProductInOrder> items = orderMain.getProducts();
         return ResponseEntity.ok(orderMain);
     }
+
+    @DeleteMapping("/order/{id}/delete")
+    public ResponseEntity deleteOrder(@PathVariable("id") Long orderId) {
+        orderService.deleteById(orderId);
+        return new ResponseEntity<OrderMain>(HttpStatus.OK);
+    }
 }
