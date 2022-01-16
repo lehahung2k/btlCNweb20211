@@ -42,18 +42,18 @@ export class ProductService {
     }
 
     update(productInfo: ProductInfo): Observable<ProductInfo> {
-        const url = `${apiUrl}/seller/product/${productInfo.productId}/edit`;
+        const url = `${apiUrl}/product/${productInfo.productId}/edit`;
         return this.http.put<ProductInfo>(url, productInfo);
     }
 
     create(productInfo: ProductInfo): Observable<ProductInfo> {
-        const url = `${apiUrl}/seller/product/new`;
+        const url = `${apiUrl}/product/new`;
         return this.http.post<ProductInfo>(url, productInfo);
     }
 
 
     delelte(productInfo: ProductInfo): Observable<any> {
-        const url = `${apiUrl}/seller/product/${productInfo.productId}/delete`;
+        const url = `${apiUrl}/product/${productInfo.productId}/delete`;
         return this.http.delete(url);
     }
 

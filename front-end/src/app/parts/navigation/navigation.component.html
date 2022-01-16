@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
+  
   <a class="navbar-brand" [routerLink]="root">
     <img src="/assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
     Deadline Shop
@@ -12,13 +13,14 @@
 
     <div class="navbar-nav" *ngIf="!currentUser || currentUser.role == Role.Customer">
 
-      <a class="nav-item nav-link " routerLink="/category/0">a
+      <a class="nav-item nav-link " routerLink="/category/0">
         Headphone
       </a>
       <a class="nav-item nav-link" routerLink="/category/1">
         SmartWatch
       </a>
       <a class="nav-item nav-link " routerLink="/category/2">
+        Book
       </a>
       <a class="nav-item nav-link" routerLink="/category/3">
         Special
@@ -45,13 +47,129 @@
         </a>
       </ng-container>
       <ng-template #noUser>
-        <a class="nav-item nav-link " routerLink="/login">
+        <a class="nav-item nav-link login" routerLink="/login">
           Sign In
         </a>
         <a class="nav-item nav-link " routerLink="/register">
           Sign Up
         </a>
       </ng-template>
+      <!-- <div class="dialog">
+
+        <div class="register">
+            <div class="btn-exit">
+                <i class='bx bxs-x-circle'></i>
+            </div>
+            
+            <form class="form" id="login">
+                <h1 class="form__title">Login</h1>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Username or email">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class="form__input" autofocus placeholder="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit">Continue</button>
+                <p class="form__text">
+                    <a href="#" class="form__link">Forgot your password?</a>
+                </p>
+                <p class="form__text">
+                    <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+                </p>
+            </form>
+            <form class="form form--hidden" id="createAccount">
+                <h1 class="form__title">Create Account</h1>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Email Address">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class="form__input" autofocus placeholder="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit">Continue</button>
+                <p class="form__text">
+                    <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+                </p>
+            </form>
+        </div>
+    </div> -->
     </div>
   </div>
 </nav>
+<section class="slider2 cid-sglkVxQRxA" id="slider2-v">
+  <div class="container-fluid">
+      <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-12">
+              <div class="carousel slide" id="shwtnjuVnZ" data-ride="carousel" data-interval="5000">
+
+                  <ol class="carousel-indicators">
+                      <li data-slide-to="0" class="active" data-target="#shwtnjuVnZ"></li>
+                      <li data-slide-to="1" data-target="#shwtnjuVnZ"></li>
+                      <li data-slide-to="2" data-target="#shwtnjuVnZ"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                      <div class="carousel-item slider-image item active">
+                          <div class="item-wrapper">
+                              <img class="d-block w-100" src="/assets/01.jpg">
+                              <div class="carousel-caption d-none d-md-block">
+                                  <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
+                                  </h5>
+                                  <p class="mbr-section-text mbr-fonts-style display-7">
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="carousel-item slider-image item">
+                          <div class="item-wrapper">
+                              <img class="d-block w-100" src="/assets/02.jpg" data-slide-to="1">
+                              <div class="carousel-caption d-none d-md-block">
+                                  <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
+                                      <strong></strong>
+                                  </h5>
+                                  <p class="mbr-section-text mbr-fonts-style display-7">
+                                      </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="carousel-item slider-image item">
+                          <div class="item-wrapper">
+                              <img class="d-block w-100" src="/assets/03.jpg" data-slide-to="2">
+                              <div class="carousel-caption d-none d-md-block">
+                                  <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
+                                      <strong></strong>
+                                  </h5>
+                                  <p class="mbr-section-text mbr-fonts-style display-7">
+                                      </p>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+                  <a class="carousel-control carousel-control-prev" role="button" data-slide="prev"
+                      href="#shwtnjuVnZ">
+                      <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control carousel-control-next" role="button" data-slide="next"
+                      href="#shwtnjuVnZ">
+                      <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

@@ -40,7 +40,8 @@ public class ProductController {
         return productInfo;
     }
 
-    @PostMapping("/seller/product/new")
+    //localhost:8080/api/product/new
+    @PostMapping("/product/new")
     public ResponseEntity create(@Valid @RequestBody ProductInfo product,
                                  BindingResult bindingResult) {
         ProductInfo productIdExists = productService.findOne(product.getProductId());
@@ -55,7 +56,7 @@ public class ProductController {
         return ResponseEntity.ok(productService.save(product));
     }
 
-    @PutMapping("/seller/product/{id}/edit")
+    @PutMapping("/product/{id}/edit")
     public ResponseEntity edit(@PathVariable("id") String productId,
                                @Valid @RequestBody ProductInfo product,
                                BindingResult bindingResult) {
@@ -68,8 +69,8 @@ public class ProductController {
 
         return ResponseEntity.ok(productService.update(product));
     }
-
-    @DeleteMapping("/seller/product/{id}/delete")
+//localhost:8080/api/product/id/delete
+    @DeleteMapping("/product/{id}/delete")
     public ResponseEntity delete(@PathVariable("id") String productId) {
         productService.delete(productId);
         return ResponseEntity.ok().build();
