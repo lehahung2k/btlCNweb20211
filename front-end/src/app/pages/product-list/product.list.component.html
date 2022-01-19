@@ -8,7 +8,8 @@
         <th scope="col">Photo</th>
         <th scope="col">Code</th>
         <th scope="col">Name</th>
-        <th scope="col">Type</th>
+        <!-- <th scope="col">Type</th> -->
+
         <th scope="col">Description</th>
         <th scope="col">Price</th>
         <th scope="col">Stock</th>
@@ -23,18 +24,22 @@
         </th>
         <td class="align-middle">{{productInfo.productId}}</td>
         <td class="align-middle">{{productInfo.productName}}</td>
-        <td class="align-middle">{{CategoryType[productInfo.categoryType]}}</td>
+        <!-- <td class="align-middle">{{CategoryType[productInfo.categoryType]}}</td> -->
         <td class="align-middle">{{productInfo.productDescription}}</td>
         <td class="align-middle">{{productInfo.productPrice | currency}}</td>
         <td class="align-middle">{{productInfo.productStock}}</td>
         <td class="align-middle">{{ProductStatus[productInfo.productStatus]}}</td>
         <td class="align-middle">
-            <a style="display: block" routerLink="/seller/product/{{productInfo.productId}}/edit">
-                Edit</a>
+            <a style="display: block" class="btn btn-outline-primary" role="button"
+            routerLink="/seller/product/{{productInfo.productId}}/edit">
+                Edit
+            </a>
 
-            <a *ngIf="currentUser?.role == Role.Customer" style="display: block"
-               (click)="remove(page.content, productInfo.productId)" routerLink="./">
-                Remove</a>
+            <a *ngIf="currentUser?.role == Role.Customer" role="button" class="btn btn-outline-danger"
+            (click)="remove(page.content, productInfo.productId)" routerLink="./">
+                Remove
+            </a>
+
         </td>
 
     </tbody>

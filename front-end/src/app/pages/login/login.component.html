@@ -8,9 +8,9 @@
       <div class="alert alert-info" *ngIf="isLogout">
         You have been logged out.
       </div>
-      <div class="btn-exit">
+      <!-- <div class="btn-exit">
         <i class='bx bxs-x-circle'></i>
-    </div>
+      </div> -->
 
       <h1>Sign In</h1>
       <form #form='ngForm' (ngSubmit)="onSubmit()">
@@ -46,14 +46,13 @@
       </form>
 
 
-      <strong>Sample Users</strong>
-      <table style="width: 100%;" id="sampleLoginTable">
+      <!-- <strong>Ví dụ</strong>
         <tr>
           <td><a (click)="fillLoginFields('customer1@email.com','123')" href="javascript:void(0)">customer1</a></td>
           <td><a (click)="fillLoginFields('employee1@email.com','123')" href="javascript:void(0)">employee1</a></td>
-          <td><a (click)="fillLoginFields('manager1@email.com','123')" href="javascript:void(0)">manager1</a></td>
+          <td><a (click)="fillLoginFields('manager1@email.com','123456')" href="javascript:void(0)">manager1</a></td>
         </tr>
-      </table>
+      </table> -->
 
     </div>
   </div>
