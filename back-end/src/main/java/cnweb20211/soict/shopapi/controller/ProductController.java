@@ -41,6 +41,7 @@ public class ProductController {
     }
 
     //localhost:8080/api/product/new
+    //thêm sản phẩm
     @PostMapping("/product/new")
     public ResponseEntity create(@Valid @RequestBody ProductInfo product,
                                  BindingResult bindingResult) {
